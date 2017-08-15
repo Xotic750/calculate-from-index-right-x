@@ -1,6 +1,6 @@
 /**
  * @file Calculates a fromIndexRight of a given value for an array.
- * @version 1.0.1
+ * @version 1.0.2
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -22,7 +22,7 @@ var $calcFromIndexRight = function calcFromIndexRight(array, fromIndex) {
 
   var length = toLength(object.length);
   var index = Math.min(toInteger(fromIndex), length - 1);
-  return index >= 0 ? index : length - Math.abs(index);
+  return index >= 0 ? index : length + index;
 };
 
 /**
