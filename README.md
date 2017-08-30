@@ -23,7 +23,7 @@
 ## calculate-from-index-right-x
 Calculates a fromIndexRight of a given value for an array.
 
-**Version**: 1.0.2  
+**Version**: 2.0.0  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
