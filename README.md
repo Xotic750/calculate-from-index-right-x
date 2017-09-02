@@ -23,16 +23,16 @@
 ## calculate-from-index-right-x
 Calculates a fromIndexRight of a given value for an array.
 
-**Version**: 2.0.0  
+**Version**: 2.0.1  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
 <a name="exp_module_calculate-from-index-right-x--module.exports"></a>
 
-### `module.exports` ⇒ <code>number</code> ⏏
+### `module.exports(array, fromIndex)` ⇒ <code>number</code> ⏏
 This method calculates a fromIndexRight of a given value for an array.
 
-**Kind**: Exported member  
+**Kind**: Exported function  
 **Returns**: <code>number</code> - The calculated fromIndex. Default is 0.  
 **Throws**:
 
@@ -41,7 +41,7 @@ This method calculates a fromIndexRight of a given value for an array.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| array | <code>array</code> | The array on which to calculate the starting index. |
+| array | <code>Array</code> | The array on which to calculate the starting index. |
 | fromIndex | <code>number</code> | The position in this array at which to begin. A  negative value gives the index of array.length + fromIndex by asc. |
 
 **Example**  
