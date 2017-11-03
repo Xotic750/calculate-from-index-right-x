@@ -1,6 +1,6 @@
 {
   "name": "calculate-from-index-right-x",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Calculates a fromIndexRight of a given value for an array.",
   "homepage": "https://github.com/Xotic750/calculate-from-index-right-x",
   "author": {
@@ -29,10 +29,10 @@
     "url": "https://github.com/Xotic750/calculate-from-index-right-x/issues"
   },
   "dependencies": {
-    "is-array-like-x": "^1.7.0",
-    "to-integer-x": "^2.1.0",
-    "to-length-x": "^2.1.0",
-    "to-object-x": "^1.4.1"
+    "is-array-like-x": "^1.8.0",
+    "to-integer-x": "^3.0.0",
+    "to-length-x": "^3.0.0",
+    "to-object-x": "^1.5.0"
   },
   "devDependencies": {
     "@xotic750/eslint-config-standard-x": "^2.2.1",

@@ -1,6 +1,6 @@
 /**
  * @file Calculates a fromIndexRight of a given value for an array.
- * @version 2.1.0
+ * @version 2.2.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -10,9 +10,13 @@
 'use strict';
 
 var toObject = require('to-object-x');
-var toLength = require('to-length-x');
-var toInteger = require('to-integer-x');
+var toLength = require('to-length-x').toLength2018;
+var toInteger = require('to-integer-x').toInteger2018;
 var isArrayLike = require('is-array-like-x');
+
+var getMin = function _getMin(a, b) {
+  return a <= b ? a : b;
+};
 
 /**
  * This method calculates a fromIndexRight of a given value for an array.
@@ -37,6 +41,7 @@ module.exports = function calcFromIndexRight(array, fromIndex) {
   }
 
   var length = toLength(object.length);
-  var index = Math.min(toInteger(fromIndex), length - 1);
+  var index = getMin(toInteger(fromIndex), length - 1);
+
   return index >= 0 ? index : length + index;
 };
