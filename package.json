@@ -50,9 +50,9 @@
   },
   "dependencies": {
     "is-array-like-x": "^1.8.0",
-    "to-integer-x": "^4.0.2",
-    "to-length-x": "^3.0.0",
-    "to-object-x": "^1.5.0"
+    "to-integer-x": "^4.0.5",
+    "to-length-x": "^4.0.1",
+    "to-object-x": "^2.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
