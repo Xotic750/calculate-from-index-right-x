@@ -7,14 +7,12 @@
  * @module calculate-from-index-right-x
  */
 
-'use strict';
+const toObject = require('to-object-x');
+const toLength = require('to-length-x').toLength2018;
+const toInteger = require('to-integer-x').toInteger2018;
+const isArrayLike = require('is-array-like-x');
 
-var toObject = require('to-object-x');
-var toLength = require('to-length-x').toLength2018;
-var toInteger = require('to-integer-x').toInteger2018;
-var isArrayLike = require('is-array-like-x');
-
-var getMin = function _getMin(a, b) {
+const getMin = function _getMin(a, b) {
   return a <= b ? a : b;
 };
 
@@ -35,13 +33,14 @@ var getMin = function _getMin(a, b) {
  * calcFromIndexRight([1, 2, 3], -1); // 2
  */
 module.exports = function calcFromIndexRight(array, fromIndex) {
-  var object = toObject(array);
+  const object = toObject(array);
+
   if (isArrayLike(object) === false) {
     return 0;
   }
 
-  var length = toLength(object.length);
-  var index = getMin(toInteger(fromIndex), length - 1);
+  const length = toLength(object.length);
+  const index = getMin(toInteger(fromIndex), length - 1);
 
   return index >= 0 ? index : length + index;
 };
