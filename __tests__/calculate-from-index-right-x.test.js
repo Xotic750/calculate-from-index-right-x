@@ -25,24 +25,27 @@ if (typeof module === 'object' && module.exports) {
 
 describe('calcFromIndexRight', function() {
   it('is a function', function() {
+    expect.assertions(1);
     expect(typeof calcFromIndexRight).toBe('function');
   });
 
   it('should throw when target not undefined', function() {
+    expect.assertions(1);
     expect(function() {
       calcFromIndexRight();
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
       calcFromIndexRight(void 0);
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
 
     expect(function() {
       calcFromIndexRight(null);
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
   });
 
   it('should return the correct values for array-like objects', function() {
+    expect.assertions(1);
     const subjects = [
       'abc',
       [1, 2, 3],
@@ -72,6 +75,7 @@ describe('calcFromIndexRight', function() {
   });
 
   it('should return the correct values non array-like objects', function() {
+    expect.assertions(1);
     const subjects = [
       1,
       true,
