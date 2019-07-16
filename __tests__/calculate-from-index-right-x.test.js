@@ -1,28 +1,5 @@
 let calcFromIndexRight;
 
-if (typeof module === 'object' && module.exports) {
-  require('es5-shim');
-  require('es5-shim/es5-sham');
-
-  if (typeof JSON === 'undefined') {
-    JSON = {};
-  }
-
-  require('json3').runInContext(null, JSON);
-  require('es6-shim');
-  const es7 = require('es7-shim');
-  Object.keys(es7).forEach(function(key) {
-    const obj = es7[key];
-
-    if (typeof obj.shim === 'function') {
-      obj.shim();
-    }
-  });
-  calcFromIndexRight = require('../../index.js');
-} else {
-  calcFromIndexRight = returnExports;
-}
-
 describe('calcFromIndexRight', function() {
   it('is a function', function() {
     expect.assertions(1);
