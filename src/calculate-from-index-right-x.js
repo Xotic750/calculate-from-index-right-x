@@ -17,7 +17,7 @@ const getMin = function _getMin(a, b) {
  *  negative value gives the index of array.length + fromIndex by asc.
  * @returns {number} The calculated fromIndex. Default is 0.
  */
-export default function calcFromIndexRight(array, fromIndex) {
+const calcFromIndexRight = function calcFromIndexRight(array, fromIndex) {
   const object = toObject(array);
 
   if (isArrayLike(object) === false) {
@@ -28,4 +28,6 @@ export default function calcFromIndexRight(array, fromIndex) {
   const index = getMin(toInteger(fromIndex), length - 1);
 
   return index >= 0 ? index : length + index;
-}
+};
+
+export default calcFromIndexRight;
