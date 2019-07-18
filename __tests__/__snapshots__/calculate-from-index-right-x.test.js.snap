@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calcFromIndexRight should throw when target not undefined 1`] = `"Cannot call method on undefined"`;
+
+exports[`calcFromIndexRight should throw when target not undefined 2`] = `"Cannot call method on undefined"`;
+
+exports[`calcFromIndexRight should throw when target not undefined 3`] = `"Cannot call method on null"`;

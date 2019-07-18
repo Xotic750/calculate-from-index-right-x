@@ -1,4 +1,4 @@
-let calcFromIndexRight;
+import calcFromIndexRight from '../src/calculate-from-index-right-x';
 
 describe('calcFromIndexRight', function() {
   it('is a function', function() {
@@ -7,7 +7,7 @@ describe('calcFromIndexRight', function() {
   });
 
   it('should throw when target not undefined', function() {
-    expect.assertions(1);
+    expect.assertions(3);
     expect(function() {
       calcFromIndexRight();
     }).toThrowErrorMatchingSnapshot();

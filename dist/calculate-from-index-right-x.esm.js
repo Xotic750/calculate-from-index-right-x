@@ -1,13 +1,11 @@
 import toObject from 'to-object-x';
-
 import toLength from 'to-length-x';
 import toInteger from 'to-integer-x';
 import isArrayLike from 'is-array-like-x';
 
-const getMin = function _getMin(a, b) {
+var getMin = function _getMin(a, b) {
   return a <= b ? a : b;
 };
-
 /**
  * This method calculates a fromIndexRight of a given value for an array.
  *
@@ -17,17 +15,20 @@ const getMin = function _getMin(a, b) {
  *  negative value gives the index of array.length + fromIndex by asc.
  * @returns {number} The calculated fromIndex. Default is 0.
  */
-const calcFromIndexRight = function calcFromIndexRight(array, fromIndex) {
-  const object = toObject(array);
+
+
+var calcFromIndexRight = function calcFromIndexRight(array, fromIndex) {
+  var object = toObject(array);
 
   if (isArrayLike(object) === false) {
     return 0;
   }
 
-  const length = toLength(object.length);
-  const index = getMin(toInteger(fromIndex), length - 1);
-
+  var length = toLength(object.length);
+  var index = getMin(toInteger(fromIndex), length - 1);
   return index >= 0 ? index : length + index;
 };
 
 export default calcFromIndexRight;
+
+//# sourceMappingURL=calculate-from-index-right-x.esm.js.map
