@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-08-12T23:07:58.188Z",
+  "date": "2019-08-13T12:07:32.333Z",
   "describe": "",
   "description": "Calculates a fromIndexRight of a given value for an array.",
   "file": "calculate-from-index-right-x.js",
-  "hash": "420c4ce25f0449e1e13a",
+  "hash": "9c97e9369be33aacaf31",
   "license": "MIT",
   "version": "3.0.11"
 }
@@ -23,19 +23,48 @@
 })((function () {
   'use strict';
 
-  if (typeof self !== 'undefined') {
-    return self;
-  }
+  var ObjectCtr = {}.constructor;
+  var objectPrototype = ObjectCtr.prototype;
+  var defineProperty = ObjectCtr.defineProperty;
+  var $globalThis;
+  var getGlobalFallback = function() {
+    if (typeof self !== 'undefined') {
+      return self;
+    }
 
-  if (typeof window !== 'undefined') {
-    return window;
-  }
+    if (typeof window !== 'undefined') {
+      return window;
+    }
 
-  if (typeof global !== 'undefined') {
-    return global;
-  }
+    if (typeof global !== 'undefined') {
+      return global;
+    }
 
-  return Function('return this')();
+    return void 0;
+  };
+
+  var returnThis = function() {
+    return this;
+  };
+
+  try {
+    if (defineProperty) {
+      defineProperty(objectPrototype, '$$globalThis$$', {
+        get: returnThis,
+        configurable: true
+      });
+    } else {
+      objectPrototype.__defineGetter__('$$globalThis$$', returnThis);
+    }
+
+    $globalThis = typeof $$globalThis$$ === 'undefined' ? getGlobalFallback() : $$globalThis$$;
+
+    delete objectPrototype.$$globalThis$$;
+
+    return $globalThis;
+  } catch (error) {
+    return getGlobalFallback();
+  }
 }()), function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
