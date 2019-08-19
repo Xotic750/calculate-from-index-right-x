@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-08-15T20:51:22.977Z",
+  "date": "2019-08-19T12:54:43.007Z",
   "describe": "",
   "description": "Calculates a fromIndexRight of a given value for an array.",
   "file": "calculate-from-index-right-x.js",
-  "hash": "7547e9e755a68faab660",
+  "hash": "5f1571576e637e6c1a4c",
   "license": "MIT",
   "version": "3.1.0"
 }
@@ -1619,7 +1619,7 @@ var is_array_like_x_esm_isArrayLike = function isArrayLike(value) {
 
 
 
-var getMin = function _getMin(a, b) {
+var getMin = function getMin(a, b) {
   return a <= b ? a : b;
 };
 /**

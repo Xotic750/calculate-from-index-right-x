@@ -3,7 +3,7 @@ import toLength from 'to-length-x';
 import toInteger from 'to-integer-x';
 import isArrayLike from 'is-array-like-x';
 
-var getMin = function _getMin(a, b) {
+var getMin = function getMin(a, b) {
   return a <= b ? a : b;
 };
 /**
