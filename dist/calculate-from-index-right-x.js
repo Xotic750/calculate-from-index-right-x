@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-09-05T20:34:52.721Z",
+  "date": "2020-01-31T10:37:37.082Z",
   "describe": "",
   "description": "Calculates a fromIndexRight of a given value for an array.",
   "file": "calculate-from-index-right-x.js",
